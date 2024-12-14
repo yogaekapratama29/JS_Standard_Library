@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RegExp Regular Expression</title>
+</head>
+<body>
+    <script>
+        // const regex1 = /[a]/;
+        // const regex2 = new RegExp("[a]");
+        // const regex3 = new RegExp(/[a]/);
+
+        // RegExp Instance Method
+        // const name = "yoga eka yoga pratama"
+        // const regex = /yoga/
+
+        // let result = regex.exec(name);
+        // console.info(result);
+
+        // let test = regex.test(name);
+        // console.info(test);
+
+        //RegExp Modifier
+        const name = "yoga eka\n yOga Eka\n YOga pRatama"
+        const regex1 = /yoga/g
+        const regex2 = /Eka/ig
+
+        let result;
+        while((result = regex1.exec(name)) != null){
+            console.info(result);
+        }
+
+        while((result = regex2.exec(name)) != null){
+            console.info(result);
+        }
+
+        //Fitur RegExp
+        const regex = /ek[aiueo]/ig;
+        const text = "eko ado eki eka ejo emi elo eke";
+
+        while((result = regex.exec(text)) != null){
+            console.info(result);
+        }
+
+        console.info(string.match(/ek[aiueo]/ig));
+        console.info(string.search(/ek[aiueo]/ig));
+        console.info(string.replace(/ek[aiueo]/ig, "keren"));
+        console.info(string.replaceAll(/ek[aiueo]/ig, "keren"));
+        console.info(string.split(/e/ig));
+    </script>
+</body>
+</html>
